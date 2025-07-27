@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bounce Intro</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+
+        (function () {
+            emailjs.init("dsO1Rew8dhrmGZkFa"); // Replace with your actual public key
+        })();
+
+        function sendEmail(e) {
+            e.preventDefault();
+            const submitButton = document.querySelector('button[type="submit"]');
+            submitButton.disabled = true; // Disable button to prevent multiple submissions
+
+            emailjs.sendForm('service_a75iczm', 'template_hwi3kqm', '#contact-form')
+                .then(() => {
+                    alert("Message sent successfully!");
+                    submitButton.disabled = false; // Re-enable the button
+                }, (err) => {
+                    alert("Failed to send message. Error: " + JSON.stringify(err));
+                    submitButton.disabled = false; // Re-enable the button
+                });
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <!-- </div> -->
+    <div id="particles-js"></div>
+    <section>
+
+        <div class="intro">
+            <div class="ball"></div>
+        </div>
+
+        <nav>
+            <h1>Potfolio</h1>
+            <ul>
+                <a href="#home" style="text-decoration: none; color: black;">
+
+                    <li>Home</li>
+                </a>
+                <a href="#about"  style="text-decoration: none; color: black;">
+
+                    <li>About</li>
+                </a>
+                <a href="#service" style="text-decoration: none; color: black;">
+
+                    <li>Service</li>
+                </a>
+                <a href="#contact" style="text-decoration: none; color: black;">
+
+                    <li>Contact</li>
+                </a>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle" style="margin-top: 5rem;">🌙 Dark Mode</button>
+
+        </nav>
+        <div class="home" id="home">
+
+            <div class="left">
+                <img class="blob" src="/images/b3.svg" alt="">
+                <img class="char" src="/images/my.png" alt="">
+            </div>
+            <div class="right">
+                <div class="r">
+
+                    <h1>Hi,<br> <span>Yash Kurechiya</span></h1>
+                    <h2>WEB DEVELOPER</h2>
+                    <div class="button">
+                        <a href="#projects">
+
+                            <button class="b1">Projects</button>
+                        </a>
+                        <a href="#contact">
+                            <button class="b2">Contact</button>
+
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="about" id="about">
+            <div class="inside">
+                <div class="left2">
+                    <div class="img"></div>
+                    <h3>Yash Kurechiya</h3>
+                    <p> Web Developer</p>
+                </div>
+                <div class="center"></div>
+                <div class="right2">
+                    <h1>About me</h1>
+                    <p>I'm Yash Kurechiya, currently pursuing my B.Tech in CSE (AIML), in my final year. I am passionate
+                        about creating websites — it's fun for me to build anything, whether it's easy or hard.
+
+                        I love debugging code; it gives me a kick when I solve bugs and find smart solutions. I have
+                        strong problem-solving skills, which help me tackle complex coding challenges and optimize my
+                        work.
+
+                        I also enjoy working with the backend and integrating it with the frontend. Creating different
+                        RESTful APIs and routing services keeps me excited.
+
+                        Recently, I’ve started learning how to integrate AI models into websites. Though integrating AI
+                        APIs is a bit challenging, it gives good results after implementation.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="service" id="service">
+            <h1>Skills</h1>
+
+            <div class="marquee">
+                <div class="second">
+                    <div class="marquee-content">
+                        <!-- Skill Items: Scroll Left -->
+                        <span class="item"><img src="/images/html.png">
+                            <h3>HTML</h3>
+                        </span>
+                        <span class="item"><img src="/images/css.png">
+                            <h3>CSS</h3>
+                        </span>
+                        <span class="item"><img width={200} style="scale: 1.8; " src="/images/js.png">
+                            <h3 style="margin-top: 2.3rem;">JS</h3>
+                        </span>
+                        <span class="item"><img src="/images/react.png">
+                            <h3>React</h3>
+                        </span>
+                        <span class="item"><img style="scale: 2;" src="/images/tail.png">
+                            <h3>Tailwind</h3>
+                        </span>
+                        <!-- Add more items -->
+                    </div>
+
+                    <div class="marquee-content">
+                        <!-- Skill Items: Scroll Right -->
+                        <span class="item"><img src="/images/node.png">
+                            <h3>Node.js</h3>
+                        </span>
+                        <span class="item"><img style="scale: 1.5;" src="/images/mongo.png">
+                            <h3>MongoDB</h3>
+                        </span>
+                        <span class="item"><img style="scale: 1.3;" src="/images/git.png">
+                            <h3>Git</h3>
+                        </span>
+                        <span class="item"><img src="/images/jwt.png">
+                            <h3>JWT</h3>
+                        </span>
+                        <!-- Add more items -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        </div>
+        <!-- < class="projects"> -->
+
+        <div id="projects">
+            <h1>Projects</h1>
+            <div class="swiper">
+                <p style="color: blue;">CLick on images to open project.</p>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h2>Project1 <span style="font-weight: 600;">(Frontend)<h3>HTML, CSS, JS, GSAP</h3></span></h2>
+                        <a href="https://yasheducator.netlify.app/">
+                            <div style="display: flex; background-color: transparent;">
+
+                                <img style="margin-left: 5rem; margin-top: 2rem;" src="./images/edu.png" alt="">
+                                <img class="raju" style="scale: 0.6; margin-top: -13rem; margin-left: -5rem;"
+                                    src="./images/du4.png" alt="">
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <h2>Task Manager <span style="font-weight: 600;">(MERN)<h3>React, Nodejs, jwtAuth, MongoDB,
+                                    Express</h3></span></h2>
+                        <a href="https://taskpending.netlify.app">
+                            <div style="display: flex; background-color: transparent;">
+
+                                <img style="margin-left: 5rem; margin-top: 2rem;" src="./images/todo.png" alt="">
+                                <img class="raju" style="scale: 0.6; margin-top: -13rem; margin-left: -5rem;"
+                                    src="./images/todo2.png" alt="">
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <h2>LMS Portal <span>(Frontend)<h3>React, Clerk </h3></span></h2>
+                        <a href="https://courageous-lollipop-9addd4.netlify.app/">
+                            <div style="display: flex; background-color: transparent;">
+
+                                <img style="margin-left: 4rem; margin-top: 2rem;" src="./images/lms4.png" alt="">
+                                <img class="raju" style="scale: 0.6; margin-top: -13rem; margin-left: -7rem;"
+                                    src="./images/lms5.png" alt="">
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <h2>Discount Buddy <span>(MERN)<h3>AI powered e-commerce , React, Nodejs, MongoDB, Express,
+                                    jwtAuth, </h3></span></h2>
+                        <a href="https://discount-buddy-ivory.vercel.app/">
+                            <div style="display: flex; background-color: transparent;">
+
+                                <img style="margin-left: 5rem; margin-top: 2rem; " src="./images/ecom.png" alt="">
+                                <img class="raju" style="scale: 0.6; margin-top: -13rem; margin-left: -5rem;"
+                                    src="./images/ecom2.png" alt="">
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <div class="swiper-slide">
+                        <h2>AI Summarizer <span>(MERN)<h3>AI Integration, React, Nodejs, Express</h3></span></h2>
+                        <a href="https://text-front-two.vercel.app/">
+                            <div style="display: flex; background-color: transparent;">
+
+                                <img style="margin-left: 5rem; margin-top: 2rem; " src="./images/text1.png" alt="">
+                                <img class="raju" style="scale: 0.6; margin-top: -13rem; margin-left: -5rem;"
+                                    src="./images/image.png" alt="">
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Optional Controls -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+        <div class="contacte" id="contact">
+            <!-- Particle Background -->
+
+            <!-- Contact Section -->
+
+            <section id="contact" class="contact-section">
+                <div class="container">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <div class="contact-wrapper">
+                        <!-- Contact Form -->
+                        <form id="contact-form" class="contact-form" onsubmit="sendEmail(event)">
+                            <div class="form-group">
+                                <label for="user_name">Name</label>
+                                <input type="text" id="user_name" name="user_name" placeholder="Enter Your Name"
+                                    required />
+                            </div>
+                            <div class="form-group">
+                                <label for="user_email">Email</label>
+                                <input type="email" id="user_email" name="user_email" placeholder="Enter Your Email"
+                                    required />
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Enter Your Message"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+
+                        <!-- Contact Info -->
+                        <div class="contact-info">
+                            <h3>Contact Details</h3>
+                            <p>Email: <a href="mailto:2005yashkurechiya@gmail.com">2005yashkurechiya@gmail.com</a>
+                            </p>
+                            <p>Phone: <a href="tel:+918349476840">+91 834947 6840</a></p>
+                            <p>Location: Indore, M.P , India </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <h2>Yash Kurechiya</h2>
+                    <p>MERN Developer | BACKEND Developer | Passionate about building web experiences.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#service">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p>Email: <a href="mailto:2005yashkurechiya@gmail.com">2005yashkurechiya@gmail.com.com</a></p>
+                    <p>Phone: <a href="tel:+918349476840">+91 834947 6840</a></p>
+                    <div class="social-icons">
+                        <a href="https://github.com/yashkurechiya" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/yash-kurechiya-a076b0296/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 YASH KURECHIYA. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <!-- FontAwesome CDN (for icons) -->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+        </div>
+    </section>
+    <!-- Swiper JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init({
+                publicKey: "dsO1Rew8dhrmGZkFa", // replace with your own
+            });
+        })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
