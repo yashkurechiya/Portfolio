@@ -87,7 +87,7 @@ tl.to(".ball", {
   })
   .from('nav', {
     opacity: 0,
-    duration: 1,
+    duration: 0.5,
   })
   .from('.char', {
     opacity: 0,
@@ -103,13 +103,13 @@ tl.to(".ball", {
     x: 200,
     stagger: 1,
     opacity: 0,
-    duration: 0.5,
-    delay: 0.5
+    duration: 0.2,
+    delay: 0.2
   })
   .from('.r button', {
     opacity: 0,
-    duration: 0.5,
-    delay: 0.5
+    duration: 0.2,
+    delay: 0.2
   });
 
 // ✅ Swiper initialized after DOM load
