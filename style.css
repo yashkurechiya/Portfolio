@@ -268,7 +268,7 @@ nav ul {
 
     .inside {
         display: flex;
-        height: 150vh;
+        height: 120vh;
         margin-bottom: 10rem;
         flex-direction: column;
         align-items: center;
@@ -1058,14 +1058,15 @@ hr {
     }
 
     .service {
-        margin-top: 10rem;
+        margin-top: 1rem;
         padding-top: 1rem;
+        margin-left: -3rem;
         margin-bottom: 30rem;
     }
 
     .service h1 {
         font-size: 2.5rem;
-        margin-left: -4rem;
+        margin-left: -6rem;
         text-align: center;
         margin-top: 15rem;
         width: 100%;
