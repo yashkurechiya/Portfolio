@@ -7,7 +7,7 @@ themeToggle.addEventListener('click', () => {
 
   // Change button text/icon
   const isDark = document.body.classList.contains('dark-mode');
-  themeToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+  themeToggle.textContent = isDark ? '' : '';
 });
 
 particlesJS('particles-js', {

@@ -146,14 +146,10 @@ nav ul {
     overflow: hidden;
     margin-bottom: 0.6rem;
     font-family: 'Poppins', sans-serif;
-    animation: typing 2s steps(20) infinite;
+    /* animation: typing 2s steps(20) ; */
 }
 
-@keyframes typing {
-    from {
-        width: 0ch;
-    }
-}
+ 
 
 .button {
     gap: 1rem;
@@ -386,23 +382,8 @@ hr {
     height: 30rem;
 }
 
-.service {
-    height: 100vh;
-    width: 100vh;
-    /* margin-top: 10rem; */
-    padding: 0 10rem;
-}
-
-.service h1 {
-    font-size: 2rem;
-    width: 170vh;
-    margin-bottom: 3rem;
-    font-weight: 600;
-    /* background-color: red; */
-    text-align: center;
-    font-family: 'Poppins';
-}
-
+ 
+ 
 .indi-card img {
     width: 4rem;
 
@@ -616,8 +597,12 @@ hr {
     align-items: center;
     padding: 0 1rem;
     font-size: 2.2rem;
+    font-weight: 600;
     color: #222;
     min-width: 120px;
+}
+.item h3{
+    font-weight: 600;
 }
 
 .item img {
@@ -628,7 +613,7 @@ hr {
 }
 
 .item:hover img {
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 .second h3 {
@@ -1057,21 +1042,8 @@ hr {
         animation: none;
     }
 
-    .service {
-        margin-top: 1rem;
-        padding-top: 1rem;
-        margin-left: -8rem;
-        margin-bottom: 30rem;
-    }
-
-    .service h1 {
-        font-size: 2.5rem;
-        margin-left: -6rem;
-        text-align: center;
-        margin-top: 15rem;
-        width: 100%;
-        text-align: center;
-    }
+     
+    
 
     .item {
         min-width: 120px;
@@ -1235,45 +1207,7 @@ hr {
 }
 
 
-body.dark-mode {
-    background-color: #0d0d0d;
-    color: #f0f0f0;
-}
  
-
-.dark-mode nav,
-.dark-mode .intro,
-.dark-mode .lef,
-.dark-mode .section-title,
-.dark-mode .indi-card,
-.dark-mode .contact-section,
-.dark-mode .contact-form,
-.dark-mode .contact-info {
-    background-color: transparent !important;
-    color: #f0f0f0 !important;
-}
-
-.dark-mode .marquee {
-    background-color: rgb(61, 168, 221);
-    border-radius: 5rem;
-    color: black;
-}
-.dark-mode nav a li {
-    color: white;
-}
-
-.dark-mode .center {
-    background-color: white;
-}
-
-.dark-mode .inside {
-    background-color: transparent;
-    color: white;
-}
-
-.dark-mode a {
-    color: #1e90ff;
-}
 
 #particles-js {
     position: fixed;
@@ -1283,4 +1217,99 @@ body.dark-mode {
     height: 100%;
     z-index: 0;
     background-color: transparent;
+}
+
+.kuchh {
+    display: flex;
+    flex-direction: column;
+    height: 160vh;
+    align-items: center;
+    margin-top: -10rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+ }
+
+.kuchh h1{
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 3rem;
+}
+.container1 {
+    height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.card1 {
+  background: #161b22;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.card1 h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #58a6ff;
+}
+
+.items1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.items1 span {
+  background: white;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.items1 span:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+}
+
+.items1 i {
+  font-size: 16px;
+}
+
+.items1 span img {
+    height: 32px;   /* icon chhota aur badge ke andar fit */
+    width: 32px;
+    scale: 1.5;
+    object-fit: contain;
+}
+.items1 span {
+    background: white;
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: inset 0 0 4px rgba(255,255,255,0.05);
+}
+.card1 {
+  background: #e7ecf4;
+  border: 1px solid #30363d;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.dark .card1 .items1 span {
+    background: black;
+    color: white;
+
 }
