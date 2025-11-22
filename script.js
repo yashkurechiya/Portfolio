@@ -164,6 +164,6 @@ gsap.from('.pro-card', {
     start: 'top 60%',   // adjust as needed
     end: 'bottom 50%',
     scrub: 3,
-    markers: true       // show trigger markers (for debugging)
+    markers: false       // show trigger markers (for debugging)
   }
 });
