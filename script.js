@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 const tl = gsap.timeline();
 
 const themeToggle = document.getElementById('theme-toggle');
@@ -138,3 +140,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
  
+// gsap.to(".circle", {
+//   scrollTrigger: {
+//     trigger: ".circle",
+//     scroller: ".home", // change to 'body' if not using a custom scroll container
+//     markers: true,     // for debugging
+//     start: "top 10%",
+//     end: "bottom 60%",
+//     scrub: 2
+//   },
+//   scale: 2,           // example animation
+//    x:300,
+//   duration: 2
+// });
+
+gsap.from('.pro-card', {
+  y: 500,
+  opacity: 0,
+  duration: 1,
+  stagger:1,
+  scrollTrigger: {
+    trigger: '#projects',
+    start: 'top 60%',   // adjust as needed
+    end: 'bottom 50%',
+    scrub: 3,
+    markers: true       // show trigger markers (for debugging)
+  }
+});
