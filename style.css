@@ -54,12 +54,13 @@ nav {
 
 nav h1 {
     font-size: 2rem;
+    font-weight: 600;
 }
 
 nav ul {
     display: flex;
     gap: 60px;
-
+    font-weight :500;
     font-size: 1.3rem;
     list-style: none;
 }
@@ -124,6 +125,7 @@ nav ul {
 .r h1 {
     font-size: 3rem;
     width: 15ch;
+    font-weight: 700;
     text-wrap: nowrap;
     overflow: hidden;
     margin-bottom: 0.6rem;
@@ -189,6 +191,12 @@ nav ul {
     color: white;
 }
 
+.b2 {
+    background-color: rgb(221, 221, 221);
+}
+
+
+
 .about {
     margin-top: 10rem;
     height: 100vh;
@@ -203,7 +211,7 @@ nav ul {
     width: 100%;
     color: white;
     box-shadow: 1px 10px 8px rgba(0,0,3,0.4);
-    background-color: rgb(4, 112, 183);
+    background-color: rgb(107, 177, 224);
 }
 
 .left2 {
@@ -220,7 +228,7 @@ nav ul {
     height: 20rem;
     width: 20rem;
     border-radius: 50%;
-    box-shadow: 1px 10px 5px rgba(255, 255, 255, 0.3);
+    /* box-shadow: 1px 10px 5px rgba(255, 255, 255, 0.3); */
     /* background-color: blue; */
     background-repeat: no-repeat;
     background-position: center;
@@ -230,7 +238,7 @@ nav ul {
 }
 
 .left2 h3 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     /* color: white; */
     margin-bottom: 1rem;
 }
@@ -264,7 +272,7 @@ nav ul {
 .right2 p {
     margin-top: 2rem;
     font-size: 1.3rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:  'Roboto', sans-serif;
     /* color: white; */
 }
 
@@ -430,12 +438,7 @@ hr {
     background-color: rgb(58, 56, 56);
 }
 
-#projects {
-    height: auto;
-    /* background-color: white; */
-    margin-top: -10rem;
-    padding: 2rem 3rem;
-}
+ 
 
 #projects h1 {
     text-align: center;
