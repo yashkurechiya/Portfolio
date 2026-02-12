@@ -2,16 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline();
 
-const themeToggle = document.getElementById('theme-toggle');
-
-themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-
-  // Change button text/icon
-  const isDark = document.body.classList.contains('dark-mode');
-  themeToggle.textContent = isDark ? '' : '';
-});
-
+ 
 particlesJS('particles-js', {
   particles: {
     number: {
